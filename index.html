@@ -2,6 +2,9 @@
 <html class="no-js" lang="tr">
 <head>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="js/simple-lightbox.min.css">
+    <script src="js/simple-lightbox.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Alp Doğan Urut - Game Developer</title>
@@ -46,27 +49,33 @@
         <div class="project-media">
 
             <span class="project-media-onethird">
-                    <video src="https://i.giphy.com/media/KPH3D7cEPaxicTHoV1/giphy.mp4" autoplay="" loop="" muted=""
+                    <a href=https://i.giphy.com/KPH3D7cEPaxicTHoV1.gif>
+                        <video src="https://i.giphy.com/media/KPH3D7cEPaxicTHoV1/giphy.mp4" autoplay="" loop="" muted=""
                            playsinline=""
                            onerror="this.onerror=null;this.src='https://i.giphy.com/KPH3D7cEPaxicTHoV1.gif';">
                         <img src="https://i.giphy.com/JjzWvWwOLSIXBue3aj.gif " alt="">
-                    </video>
+                        </video>
+                    </a>
             </span>
 
             <span class="project-media-onethird">
+                <a href=https://i.giphy.com/JjzWvWwOLSIXBue3aj.gif>
                     <video src="https://i.giphy.com/media/JjzWvWwOLSIXBue3aj/giphy.mp4" autoplay="" loop="" muted=""
                            playsinline=""
-                           onerror="this.onerror=()=>{};this.src='https://i.giphy.com/JjzWvWwOLSIXBue3aj.mp4';">
+                           onerror="this.onerror=()=>{};this.src='https://i.giphy.com/JjzWvWwOLSIXBue3aj.gif';">
                         <img src="https://i.giphy.com/JjzWvWwOLSIXBue3aj.gif " alt="">
                     </video>
+                </a>
             </span>
 
             <span class="project-media-onethird">
+                <a href=https://i.giphy.com/8aZGWGb32IJ9DSzDni.gif>
                     <video src="https://i.giphy.com/media/8aZGWGb32IJ9DSzDni/giphy.mp4" autoplay="" loop="" muted=""
                            playsinline=""
-                           onerror="this.onerror=()=>{};this.src='https://i.giphy.com/JjzWvWwOLSIXBue3aj.mp4';">
+                           onerror="this.onerror=()=>{};this.src='https://i.giphy.com/8aZGWGb32IJ9DSzDni.gif';">
                         <img src="https://i.giphy.com/8aZGWGb32IJ9DSzDni.gif " alt="">
                     </video>
+                </a>
             </span>
         </div>
     </div>
@@ -160,18 +169,18 @@
             In retrospect, I believe we successfully realized the potential of the defined scope.
         </p>
         <div class="project-media">
-                <span class="project-media-quarter">
-                    <img src="images/voodoo/shaman1.jpg">
-                </span>
             <span class="project-media-quarter">
-                    <img src="images/voodoo/levelup.gif">
-                </span>
+                <a href="images/voodoo/shaman1.jpg"><img src="images/voodoo/shaman1.jpg"></a>
+            </span>
             <span class="project-media-quarter">
-                    <img src="images/voodoo/shaman2.jpg">
-                </span>
+                <a href="images/voodoo/levelup.gif"><img src="images/voodoo/levelup.gif"></a>
+            </span>
             <span class="project-media-quarter">
-                    <img src="images/voodoo/bomb.gif">
-                </span>
+                <a href="images/voodoo/shaman2.jpg"><img src="images/voodoo/shaman2.jpg"></a>
+            </span>
+            <span class="project-media-quarter">
+                <a href="images/voodoo/bomb.gif"><img src="images/voodoo/bomb.gif"></a>
+            </span>
         </div>
     </div>
 
@@ -180,6 +189,16 @@
     </footer>
 
 </div>
+
+<script>
+    var lightbox = new SimpleLightbox('a', {
+        nav: false,
+        showCounter: false,
+        scaleImageToRatio: true,
+        widthRatio: .6,
+        heightRatio: .7
+    });
+</script>
 </body>
 </head>
 </html>
