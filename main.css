@@ -1,14 +1,26 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(fonts/LibreBaskerville-Regular.ttf);
+}
+
 * {
     color: #42424A;
     text-align: center;
-    max-width: 800px;
-    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+    /*     font-family: myFirstFont, Arial, serif; */
+    /*     font-size: 0.95rem; */
 }
+
+body {
+    margin: 8em auto;
+    max-width: 800px;
+}
+
 h1, h2 {
-    font-family:'Times New Roman', Times, serif;
     text-transform: uppercase;
     font-weight: 100;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    margin: 0
 }
 
 h2 {
@@ -17,6 +29,10 @@ h2 {
 
 h3 {
     font-weight: 100;
+}
+
+p{
+    font-size: 0.95rem;
 }
 
 .project-title, .color-faint {
@@ -34,48 +50,111 @@ h3 {
 
 .separator-line {
     height: 2px;
-    width: 90%;
+    width: 98%;
     background-color: #1d1d1d;
-    margin: 60px auto;
+    margin: 40px auto 80px auto;
 }
 
 h2.project-title {
     font-size: 1.2em;
 }
 
+/* Project */
+
 .projects-wrapper {
     margin: 70px auto;
 }
 
-.separator-line {}
-
-body {
-    margin: 8em 2em;
+.project {
+    margin-top: 150px;
 }
 
-p.project-description {margin-top: 10px;}
+.project-description {
+    margin-top: 10px;
+    text-align: left;
+}
 
+/* Project Media */
 .project-media {
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
-span.project-media-half {
+.project-media-full {
+    width: 100%;
+    display: block;
+}
+
+.project-media-half {
     width: 49%;
     display: inline-block;
+}
+
+.project-media-quarter {
+    width: 24%;
+    display: inline-block;
+}
+
+.project-media-onethird {
+    width: 32.5%;
+    display: inline-block;
+}
+
+.project-media p {
+    margin: 25px 2px 25px 2px;
+    text-align: left;
+    /* font-size: 0.9em; */
+}
+
+/* Media Content */
+.project-media-full img,video {
+    width: 100%;
 }
 
 .project-media-half img {
     width: 100%;
 }
 
+.project-media-quarter img,video {
+    width: 100%;
+}
+
+.project-media-onethird video {
+    width: 100%;
+}
+
+/* Video */
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
 }
-iframe{
+
+iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+
+footer {
+    margin: 100px 0 0 0;
+    text-align: left;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    body {
+        margin: 8em 25px;
+    }
+
+    .project-media-half,.project-media-quarter,.project-media-onethird {
+        width: 100%;
+    }
+
+    .space {
+        display: block;
+        height: 8px;
+    }
 }
