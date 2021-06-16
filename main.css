@@ -1,0 +1,70 @@
+* {
+    color: #42424A;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+h1, h2 {
+    font-family:'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+.project-title, .color-faint {
+    color: #7C6F6F;
+}
+
+.first-letter {
+    font-size: 1.3em;
+}
+
+.space {
+    width: 4em;
+    display: inline-block;
+}
+
+.separator-line {
+    height: 2px;
+    width: 90%;
+    background-color: #1d1d1d;
+    margin: 60px auto;
+}
+
+h2.project-title {
+    font-size: 1.2em;
+}
+
+.projects-wrapper {
+    margin: 70px auto;
+}
+
+.separator-line {}
+
+body {
+    margin: 8em 0;
+}
+
+p.project-description {margin-top: 10px;}
+
+.project-media {
+    margin-top: 40px;
+}
+
+span.project-media-half {
+    width: 50%;
+    display: block;
+}
+
+.project-media-half img {
+    width: 100%;
+}
+
