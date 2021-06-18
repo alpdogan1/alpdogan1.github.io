@@ -31,8 +31,14 @@ h3 {
     font-weight: 100;
 }
 
-p{
+p {
     font-size: 0.95rem;
+}
+
+
+a {
+    color: #ff1c6e;
+    font-size: 0.9em;
 }
 
 .project-title, .color-faint {
