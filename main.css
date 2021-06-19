@@ -108,24 +108,28 @@ h2.project-title {
 .project-media p {
     margin: 25px 2px 25px 2px;
     text-align: left;
-    /* font-size: 0.9em; */
 }
 
 /* Media Content */
-.project-media-full img,video {
+.project-media-full img, video {
     width: 100%;
 }
 
-.project-media-half img {
+.project-media-half img, video {
     width: 100%;
 }
 
-.project-media-quarter img,video {
+.project-media-quarter img, video {
     width: 100%;
 }
 
-.project-media-onethird video {
+.project-media-onethird img, video {
     width: 100%;
+}
+
+.project-media video, img {
+    margin-top: 25px;
+    max-width: 420px;
 }
 
 /* Video */
