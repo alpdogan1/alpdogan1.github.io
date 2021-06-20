@@ -111,26 +111,10 @@ h2.project-title {
 }
 
 /* Media Content */
-.project-media-full img, video {
+.project-media img, .project-media video {
     width: 100%;
 }
 
-.project-media-half img, video {
-    width: 100%;
-}
-
-.project-media-quarter img, video {
-    width: 100%;
-}
-
-.project-media-onethird img, video {
-    width: 100%;
-}
-
-.project-media video, img {
-    margin-top: 25px;
-    max-width: 420px;
-}
 
 /* Video */
 .video-wrapper {
@@ -166,6 +150,14 @@ footer {
     .space {
         display: block;
         height: 8px;
+    }
+
+    .project-media video, .project-media img {
+        max-width: 420px;
+    }
+
+    .project-media-full img, .project-media-full  video {
+        max-width: 100% !important;
     }
 }
 
