@@ -1,0 +1,22 @@
+.passive-animation-step {
+    background: none !important;
+}
+
+.animation-step {
+    cursor: pointer;
+    margin: 7px 0;
+    font-weight: 600;
+    margin: 1px !important;
+}
+
+.animation-step:hover {
+    background-color: #4c4c4c;
+}
+
+.animation-small-input {
+    width: 100px;
+}
+
+.table-row-spacer {
+    width: 3em;
+}
