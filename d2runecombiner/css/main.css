@@ -1,0 +1,47 @@
+/*LIST*/
+.common-header {
+    font-size: large;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #6e6e6e;
+}
+
+.common-list {
+    padding: 20px 16px;
+}
+
+.main-header {
+    font-size: 2em;
+    margin: 14px 32px;
+    color: black;
+}
+
+.main-header-note {
+    font-size: .5em;
+    color: #4a4a4a;
+}
+
+.rune-view {
+    padding: 6px;
+    display: flex;
+}
+
+.rune-view-button-wrapper {
+    padding: 0 8px;
+}
+
+.add-rune-view {
+    max-width: 14em;
+}
+
+.rune-list {
+
+}
+
+.rune-result-list {
+
+}
+
+.gem-list {
+
+}

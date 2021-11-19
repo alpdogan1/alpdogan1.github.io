@@ -1,5 +1,4 @@
 Vue.component('rune-view', {
-    // props: ['runeGroup', 'isEditable'],
     props: {
         runeGroup: RuneGroup,
         isEditable: {
@@ -35,12 +34,9 @@ Vue.component('rune-view', {
     },
     template: `
         <div class="rune-view">
-            <div>{{this.runeGroup.count}} x {{capitalizeFirstLetter(this.runeGroup.name)}}</div>
-            <div v-if="isEditable" class="field is-grouped">
+            <div>{{this.runeGroup.count}} x <strong>{{capitalizeFirstLetter(this.runeGroup.name)}}</strong></div>
+            <div v-if="isEditable" class="field is-grouped rune-view-button-wrapper">
                 <div class="buttons are-small">
-<!--                    <a class="button is-small" @click="increaseCount">+</a>-->
-<!--                    <a class="button is-small" @click="decreaseCount">-</a>-->
-<!--                    <a class="button is-danger" @click="requestDelete">-</a>-->
                     <button class="button is-small is-inverted" @click="decreaseCount" tabindex="-1">
                         <span class="icon is-small">
                             <i class="fas fa-minus"></i>

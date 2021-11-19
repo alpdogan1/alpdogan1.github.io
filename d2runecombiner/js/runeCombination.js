@@ -24,7 +24,7 @@ function RuneCombination (runesCombinationConfig) {
             groups.push(remainingGroup);
         }
 
-        return new GroupCombinationResult(groups, true, config.gem);
+        return new GroupCombinationResult(groups, true, config.gem, nextRuneCount);
     }
 
     this.combineRuneGroups = function (runeGroupArray) {
@@ -46,8 +46,9 @@ function RuneCombination (runesCombinationConfig) {
 
 let runeCombination = new RuneCombination(runesCombinationConfig);
 
-function GroupCombinationResult(groups, isCombined, gem) {
+function GroupCombinationResult(groups, isCombined, gem, gemCount) {
     this.groups = groups;
     this.isCombined = isCombined;
     this.gem = gem;
+    this.gemCount = gemCount;
 }

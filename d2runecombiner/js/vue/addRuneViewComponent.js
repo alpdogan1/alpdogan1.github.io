@@ -7,11 +7,14 @@ Vue.component('add-rune-view', {
     },
     methods: {
         onSelect(value) {
-            this.value = value;
-            console.log(`Selected ${this.value}`);
+            // this.value = value;
+            console.log(`Selected ${value}`);
 
             if(value != null)
-                this.$emit('select', this.value);
+                this.$emit('select', value);
+
+            // this.$refs.inputBox.setSelected(null);
+            this.value = null;
         }
     },
     computed: {
@@ -31,15 +34,17 @@ Vue.component('add-rune-view', {
         })
     },
     template: `
-        <div>
-            <b-field label="Add Rune">
+        <div class="add-rune-view">
+            <b-field>
                 <b-autocomplete
+                    ref="inputBox"
                     rounded
                     v-model="value"
                     :data="filteredDataArray"
                     placeholder="e.g. Ohm, Vex etc."
                     icon="magnify"
                     clearable
+                    open-on-focus
                     @select="onSelect">
                     <template #empty>No results found</template>
                 </b-autocomplete>
