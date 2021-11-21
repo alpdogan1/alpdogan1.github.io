@@ -19,6 +19,7 @@ Vue.component('add-rune-view', {
     },
     computed: {
         filteredDataArray() {
+            if(this.value === "") return this.runes;
             if(this.value == null) return [];
             return this.runes.filter((option) => {
                 return option
@@ -41,7 +42,7 @@ Vue.component('add-rune-view', {
                     rounded
                     v-model="value"
                     :data="filteredDataArray"
-                    placeholder="e.g. Ohm, Vex etc."
+                    placeholder="Add rune"
                     icon="magnify"
                     clearable
                     open-on-focus

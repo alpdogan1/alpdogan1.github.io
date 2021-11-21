@@ -1,13 +1,15 @@
 /*LIST*/
 .common-header {
-    font-size: large;
+    font-size: 1.4em;
     font-weight: bold;
     margin: 12px 0;
-    color: #6e6e6e;
+    color: #484848;
 }
 
 .common-list {
-    padding: 20px 16px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    margin: 4px;
 }
 
 .main-header {
@@ -22,8 +24,13 @@
 }
 
 .rune-view {
-    padding: 6px;
+    padding: 8px 18px;
     display: flex;
+    border-radius: 5px;
+}
+
+.rune-view:hover {
+    background-color: hsl(200deg 18% 96%);
 }
 
 .rune-view-button-wrapper {
@@ -31,17 +38,51 @@
 }
 
 .add-rune-view {
-    max-width: 14em;
-}
-
-.rune-list {
-
+    /* max-width: 14em; */
+    display: inline-block;
 }
 
 .rune-result-list {
-
+    padding-top: 0;
 }
 
-.gem-list {
+.main-section-container {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
 
+.common-section {
+    margin: 1em;
+    min-width: 400px;
+    flex: 1;
+}
+
+.rune-view-rune-name {
+    min-width: 6em;
+    /* line-height: 1em; */
+}
+
+h3.reserved-runes-header {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.reserved-rune-result-list {
+    background-color: hsl(0deg 0% 97%);
+}
+
+.rune-view-found-text {
+    font-size: 0.8em;
+    line-height: 2.5em;
+    font-weight: bold;
+}
+
+button.button.is-small {
+    /*     margin-bottom: 0 !important; */
+}
+
+.results-header {
+    color: #00c33d;
+    font-size: 1.8em;
 }

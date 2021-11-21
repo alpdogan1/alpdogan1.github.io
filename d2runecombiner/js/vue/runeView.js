@@ -21,7 +21,7 @@ Vue.component('rune-view', {
             else
                 this.runeGroup.count -= 1;
 
-            if(this.runeGroup.count < 0) this.runeGroup.count = 0;
+            if(this.runeGroup.count < 1) this.runeGroup.count = 1;
 
             this.$emit('countChange', this.runeGroup);
         },
@@ -34,7 +34,7 @@ Vue.component('rune-view', {
     },
     template: `
         <div class="rune-view">
-            <div>{{this.runeGroup.count}} x <strong>{{capitalizeFirstLetter(this.runeGroup.name)}}</strong></div>
+            <div class="rune-view-rune-name">{{this.runeGroup.count}} x <strong>{{capitalizeFirstLetter(this.runeGroup.name)}}</strong></div>
             <div v-if="isEditable" class="field is-grouped rune-view-button-wrapper">
                 <div class="buttons are-small">
                     <button class="button is-small is-inverted" @click="decreaseCount" tabindex="-1">
@@ -54,6 +54,7 @@ Vue.component('rune-view', {
                     </button>
                 </div>
             </div>
+            <slot></slot>
         </div>
     `
 })

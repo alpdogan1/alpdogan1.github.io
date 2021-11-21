@@ -186,3 +186,29 @@ let runesCombinationConfig = [
         name: 'zod'
     }
 ];
+
+let sortedGemsList = [
+    'chipped topaz',
+    'chipped amethyst',
+    'chipped sapphire',
+    'chipped ruby',
+    'chipped emerald',
+    'chipped diamond',
+    'flawed topaz',
+    'flawed amethyst',
+    'flawed sapphire',
+    'flawed ruby',
+    'flawed emerald',
+    'flawed diamond',
+    'topaz',
+    'amethyst',
+    'sapphire',
+    'ruby',
+    'emerald',
+    'diamond',
+    'flawless topaz',
+    'flawless amethyst',
+    'flawless sapphire',
+    'flawless ruby',
+    'flawless emerald'
+];
