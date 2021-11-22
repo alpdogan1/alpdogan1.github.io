@@ -38,7 +38,6 @@
 }
 
 .add-rune-view {
-    /* max-width: 14em; */
     display: inline-block;
 }
 
@@ -60,7 +59,6 @@
 
 .rune-view-rune-name {
     min-width: 6em;
-    /* line-height: 1em; */
 }
 
 h3.reserved-runes-header {
@@ -69,7 +67,7 @@ h3.reserved-runes-header {
 }
 
 .reserved-rune-result-list {
-    background-color: hsl(0deg 0% 97%);
+    background-color: hsl(0deg 0% 98%);
 }
 
 .rune-view-found-text {
@@ -78,11 +76,12 @@ h3.reserved-runes-header {
     font-weight: bold;
 }
 
-button.button.is-small {
-    /*     margin-bottom: 0 !important; */
-}
-
 .results-header {
     color: #00c33d;
     font-size: 1.8em;
+}
+
+.footnote {
+    font-size: 0.9em;
+    padding: 0 1.7em;
 }
