@@ -50,6 +50,7 @@ Vue.component('add-rune-view', {
                     <template #empty>No results found</template>
                 </b-autocomplete>
             </b-field>
+            <slot></slot>
         </div>
     `
 })

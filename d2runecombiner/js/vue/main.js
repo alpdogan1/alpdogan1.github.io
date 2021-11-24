@@ -54,7 +54,16 @@ let app = new Vue({
 
             this.combinedGroups = runeGroupsClone;
 
+
             this.foundWantedRunes = runeCombination.combineRuneGroups(this.foundWantedRunes);
+
+            function runeGroupExists(group) {
+                    return group.count <= 0;
+            }
+
+            _.remove(this.combinedGroups, runeGroupExists);
+            _.remove(this.foundWantedRunes, runeGroupExists);
+
             this.reorderLists();
         },
         reorderLists() {
@@ -158,6 +167,22 @@ let app = new Vue({
             this.calculateHighest();
             this.saveToLocal();
         },
+        addAllRunes(){
+            for (const runesCombinationConfigKey in runesCombinationConfig) {
+                const runeConfig = runesCombinationConfig[runesCombinationConfigKey];
+
+                if(_.some(this.runeGroups, (runeGroup)=>{return runeConfig.name === runeGroup.name })) continue;
+
+                this.runeGroups.push(new RuneGroup(runeConfig.name, 0));
+                this.calculateHighest();
+                this.saveToLocal();
+            }
+        },
+        clearRunes() {
+            this.runeGroups = [];
+            this.calculateHighest();
+            this.saveToLocal();
+        },
         // WANTED RUNES
         addWantedRuneGroup(runeName) {
             // Return if group already exists
@@ -235,7 +260,7 @@ let app = new Vue({
 
         
 <div class="container">
-    <h1 class="main-header common-header">D2 Rune Combiner <span class="main-header-note">beta</span></h1>
+    <h1 class="main-header common-header">D2 Rune Combiner <span class="main-header-note">0.2 beta</span></h1>
     <div class="main-section-container">
     
     <!-- SECTION 2 - INPUT -->
@@ -254,7 +279,10 @@ let app = new Vue({
                 <!-- ADD -->
                 <div>
                     <h2 class="common-header">Owned Runes</h2>
-                    <add-rune-view @select="addRuneGroup"></add-rune-view>
+                    <add-rune-view @select="addRuneGroup">
+                        <b-button class="add-all-runes-button" @click="addAllRunes">Add All Runes</b-button>
+                        <b-button class="add-all-runes-button" type="is-danger is-light" @click="clearRunes">Clear</b-button>
+                    </add-rune-view>
                 </div>
                 <!-- LIST -->
                 <div class="rune-list common-list">
