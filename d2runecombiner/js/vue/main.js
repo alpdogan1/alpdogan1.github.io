@@ -100,7 +100,6 @@ let app = new Vue({
             }
         },
         reduceWantedRunes(runeGroups, wantedRunes) {
-            // let wantedRunesClone = _.cloneDeep(this.wantedRunes);
             let runeGroupsClone = _.cloneDeep(runeGroups);
 
 
@@ -113,12 +112,6 @@ let app = new Vue({
                 });
 
                 if(foundGroup == null) continue;
-                // if(found.length === 0) {        // Not found
-                //     continue;
-                // }
-                // if(found.length > 1 ) console.log("Found more than one same type of rune group while checking for wanted runes.")
-
-                // let foundGroup = found[0];
 
                 let foundWantedRuneGroup = new RuneGroup(foundGroup.name, wantedRuneGroup.count);
                 this.foundWantedRunes.push(foundWantedRuneGroup);
@@ -134,10 +127,6 @@ let app = new Vue({
                     this.removeArrayItem(runeGroupsClone, foundGroup);
                 }
             }
-
-            /*_.reduce(this.wantedRunes, (wantedRune)=> {
-                return wantedRune.count === 0;
-            })*/
 
             return runeGroupsClone;
         },
@@ -239,8 +228,6 @@ let app = new Vue({
                 Object.setPrototypeOf(runeObj, RuneGroup.prototype);
             }
             this.wantedRunes = parsedRunes.wantedRunes;
-
-            console.log(parsedRunes);
         },
         removeArrayItem(array, item) {
             const index = array.indexOf(item);
